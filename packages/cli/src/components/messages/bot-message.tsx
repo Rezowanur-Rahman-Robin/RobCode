@@ -4,6 +4,7 @@ import { useTheme } from "../../providers/theme";
 import type { Message } from "../../hooks/use-chat";
 import { Mode, type ModeType } from "@robcode/shared";
 import { TextAttributes } from "@opentui/core";
+import { MarkdownText } from "./markdown-text";
 
 type ClientMessagePart = Message["parts"][number];
 type ToolPart = Extract<ClientMessagePart, { type: `tool-${string}` | "dynamic-tool" }>;
@@ -121,7 +122,7 @@ export function BotMessage({
             if (part.type === "text") {
               return (
                 <box key={`text-${j}`} paddingX={3} width="100%">
-                  <text>{part.text}</text>
+                  <MarkdownText text={part.text} streaming={streaming} />
                 </box>
               );
             }
