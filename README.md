@@ -3,7 +3,7 @@
 <br />
 <br />
 
-<h1>robcode</h1>
+<h1>RobCode</h1>
 
 <p>A terminal-based AI coding agent.</p>
 
