@@ -28,29 +28,6 @@
 
 <br />
 
-## Tutorial
-
-Each chapter has a matching branch so you can check out the code at any point in the tutorial:
-
-| Branch | Chapter |
-|--------|---------|
-| `main` | Final project |
-| `01-project-setup-component-architecture` | Project setup and component architecture |
-| `02-ui-infrastructure` | Terminal UI infrastructure |
-| `03-routing-screen-layout` | Routing and screen layout |
-| `04-server-shared-database` | Server, shared package, and database |
-| `05-ai-chat-streamiing` | AI chat streaming |
-| `06-session-management-config` | Session management and configuration |
-| `07-tool-calling` | Tool calling |
-| `08-user-experience` | User experience polish |
-| `09-billing` | Billing and credit metering |
-| `10-client-side-tool-execution` | Client-side tool execution |
-| `11-the-end` | Final tutorial state |
-
-```bash
-git checkout 07-tool-calling  # example: jump to tool calling
-```
-
 ## Features
 
 - **Terminal AI Chat** - Run an AI coding assistant directly in your terminal with an OpenTUI and React interface
