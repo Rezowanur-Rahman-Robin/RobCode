@@ -52,7 +52,7 @@
 ### 1. Clone and install
 
 ```bash
-git clone git@github.com:code-with-antonio/robcode.git
+git clone https://github.com/Rezowanur-Rahman-Robin/RobCode.git
 cd robcode
 bun install
 ```
