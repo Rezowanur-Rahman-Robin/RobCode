@@ -225,40 +225,45 @@ function InlineText({ segments }: { segments: InlineSegment[] }) {
   const { colors } = useTheme();
 
   return (
-    <box flexDirection="row">
+    <>
       {segments.map((seg, idx) => {
         switch (seg.type) {
           case "text":
             return <text key={idx}>{seg.text}</text>;
+
           case "code":
             return (
               <text key={idx} fg={colors.info}>
                 {seg.text}
               </text>
             );
+
           case "link":
             return (
               <text key={idx} fg={colors.info}>
                 {seg.text}
               </text>
             );
+
           case "bold":
             return (
               <text key={idx} attributes={TextAttributes.BOLD}>
                 {seg.text}
               </text>
             );
+
           case "italic":
             return (
               <text key={idx}>
                 <em>{seg.text}</em>
               </text>
             );
+
           default:
             return null;
         }
       })}
-    </box>
+    </>
   );
 }
 
@@ -421,7 +426,7 @@ export function MarkdownText({ text, streaming = false }: MarkdownTextProps) {
               </box>
             );
 
-          case "blockquote":
+     case "blockquote":
             return (
               <box
                 key={i}
@@ -434,9 +439,7 @@ export function MarkdownText({ text, streaming = false }: MarkdownTextProps) {
                 paddingLeft={1}
                 width="100%"
               >
-                <text attributes={TextAttributes.DIM}>
-                  <InlineText segments={block.segments} />
-                </text>
+                <InlineText segments={block.segments} />
               </box>
             );
 
